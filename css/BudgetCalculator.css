@@ -1,0 +1,121 @@
+/** Add css rules here for your application. */
+/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 0px 70px;
+	text-align: center;
+}
+
+.dialogButton {
+	display: block;
+	font-size: 16pt;
+}
+
+.budgetCalculatorContainer {
+	text-align: center;
+}
+
+#budgetCalculator {
+	display: inline-block;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+	text-align: center;
+}
+
+.gwt-Label {
+	padding: 5px 0px;
+	font-family: verdana, sans-serif;
+}
+
+.errorMessage {
+	color: red;
+	text-align: center;
+}
+
+/* spending history flex table */
+.spendingHistory {
+	padding: 2px;
+	width: 30em;
+}
+
+.spendingHistoryRow td {
+	border-top: 1px solid silver;
+}
+
+/* header row for spending history */
+.headerRow {
+	font-weight: bold;
+	text-align: center;
+}
+
+/* headers */
+.header {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 11pt;
+}
+
+/* spending history expense column */
+.expenseColumn {
+	text-align: center;
+	width: 8em;
+}
+
+/* spending history expense columm */
+.dateColumn {
+	text-align: center;
+	width: 8em;
+}
+
+/* spending history expense columm */
+.removeColumn {
+	text-align: center;
+	width: 8em;
+}
+
+/* stock list, the Remove button */
+.gwt-Button-remove {
+	width: 50px;
+}
+
+.budgetLabel {
+	text-align: left;
+	margin-left: 5px; 
+}
+
+.panel {
+	border: 1px solid silver;
+	padding: 2px;
+}
+
+.budgetPanel {
+	width: 18em;
+	height: 15em;
+}
+
+.expensePanel {
+	width: 14em;
+	height: 15em;
+}
+
+.mainComponent {
+	width: 32em;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#badBudget {
+	color: red;
+	font-weight: bold;
+}
+
+#goodBudget {
+	color: green;
+	font-weight: bold;
+}
