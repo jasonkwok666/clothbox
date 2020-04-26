@@ -30,7 +30,7 @@
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
 	<div id="side-nav" class="sidenav">
 	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
+
 	<div class="sidenav-content">
 	</div>
 </div>	<div id="side-search" class="sidenav">
@@ -49,7 +49,7 @@
 
 		</form>
 	</div>
-	
+
 </div>	<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
@@ -89,7 +89,7 @@
 
 <div id="side-nav" class="sidenav">
 	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
+
 	<div class="sidenav-content">
 	</div>
 </div><div id="side-search" class="sidenav">
@@ -108,11 +108,67 @@
 
 		</form>
 	</div>
-	
+
 </div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
   <div class="container text-center">
     <h1 class="display-2 mb-4">Budget Calculator</h1>
   </div>
+
+  <!doctype html>
+  <!-- The DOCTYPE declaration above will set the     -->
+  <!-- browser's rendering engine into                -->
+  <!-- "Standards Mode". Replacing this declaration   -->
+  <!-- with a "Quirks Mode" doctype is not supported. -->
+  
+  <html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!--                                                               -->
+  <!-- Consider inlining CSS to reduce the number of requested files -->
+  <!--                                                               -->
+  <link type="text/css" rel="stylesheet" href="BudgetCalculator.css">
+
+  <!--                                           -->
+  <!-- Any title is fine                         -->
+  <!--                                           -->
+  <title>Budget Calculator</title>
+
+  <!--                                           -->
+  <!-- This script loads your compiled module.   -->
+  <!-- If you add any GWT meta tags, they must   -->
+  <!-- be added before this line.                -->
+  <!--                                           -->
+  <script type="text/javascript" language="javascript"
+  	src="budgetcalculator/budgetcalculator.nocache.js"></script>
+
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body>
+
+  	<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+  	<noscript>
+  		<div
+  			style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+  			Your web browser must have JavaScript enabled in order for this
+  			application to display correctly.</div>
+  	</noscript>
+
+  	<h1>Budget Calculator</h1>
+  	<div class="budgetCalculatorContainer">
+  		<div id="budgetCalculator"></div>
+  	</div>
+  	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+  		style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+  </body>
+  </html>
+
 
 </footer>	<!-- External JS -->
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -125,7 +181,7 @@
 	<script src="vendor/lightcase/lightcase.js"></script>
 	<script src="vendor/waypoints/waypoint.min.js"></script>
 	 <script src="js/aos.js"></script>
-	 
+
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
 	<script src="//localhost:35729/livereload.js"></script>
