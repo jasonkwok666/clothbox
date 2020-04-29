@@ -109,6 +109,10 @@ h1 {
 	width: 32em;
 }
 
+.expSubPanel {
+	margin-right: 7px;
+}
+
 /** Set ids using widget.getElement().setId("idOfElement") */
 #badBudget {
 	color: red;
