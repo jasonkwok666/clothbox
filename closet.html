@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,20 +24,13 @@
 
     <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
     <script src="js/modernizr.js"></script>
-
+        
 </head>
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
-	<div id="side-nav" class="sidenav">
+<div id="side-nav" class="sidenav">
 	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
 	
 	<div class="sidenav-content">
-		<p>
-			Kuncen WB1, Wirobrajan 10010, DIY
-		</p>
-		<p>
-			<span class="fs-16 primary-color">(+68) 120034509</span>
-		</p>
-		<p>info@yourdomain.com</p>
 	</div>
 </div>	<div id="side-search" class="sidenav">
 	<a href="javascript:void(0)" id="side-search-close">&times;</a>
@@ -95,7 +87,7 @@
 </nav>
 
 <div id="side-nav" class="sidenav">
-	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
+    <a href="javascript:void(0)" id="side-nav-close">&times;</a>
 	
 	<div class="sidenav-content">
 	</div>
@@ -118,23 +110,148 @@
 	
 </div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
   <div class="container text-center">
-    <h1 class="display-2 mb-4">Digital Closet</h1>
+    <!-- <h1 class="display-2 mb-4">Digital Closet</h1> -->
   </div>
+    
+  <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Digital Closet</title>
+        <script src="js/digitalcloset.js"></script>
+        <style>
+        body {
+            margin: 0;
+            min-width: 250px;
+        }
+            
+        /* Include the padding and border in an element's total width and height */
+        * {
+            box-sizing: border-box;
+        }
+            
+        /* Style the list items */
+        .first-ul{
+            cursor: pointer;
+            position: relative;
+            list-style-type: none;
+            transition: 0.2s;
+            margin-left: -400px;
+            
+              
+        /* make the list items unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+            
+        .close {
+        position: absolute;
+        right: 350px;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+        }
+            
+        .header {
+        padding: 30px 40px;
+        color: white;
+        text-align: left;
+        margin-left: -400px;
+        margin-top: -250px;
+        }   
 
-</footer>	<!-- External JS -->
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script src="vendor/bootstrap/popper.min.js"></script>
-	<script src="vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js "></script>
-	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-	<script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
-	<script src="vendor/isotope/isotope.min.js"></script>
-	<script src="vendor/lightcase/lightcase.js"></script>
-	<script src="vendor/waypoints/waypoint.min.js"></script>
-	 <script src="js/aos.js"></script>
-	 
+        /* Clear floats after the header */
+        .header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+            
+        /* Style the input */
+        input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 45%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+        }
+            
+        /* Style the "Add" button */
+        .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: #d9d9d9;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+            
+        </style>
+    </head>
+    <body>
+        <div class= "container">
+            <div id="myDIV" class="header">
+              <h2 style="margin:2px">My Closet</h2>
+              <input type="text" id="myInput" placeholder="item...">
+              <span onclick="newElement()" class="addBtn">Add to Closet</span>
+            </div>
+            
+            <ul class="first-ul" id="myUL">
+            </ul>
+            
+            <script>
+            
+            
+            // Click on a close button to hide the current list item
+            var close = document.getElementsByClassName("close");
+            var i;
+            for (i = 0; i < close.length; i++) {
+              close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+            }
+            
+            // Create a new list item when clicking on the "Add" button
+            function newElement() {
+              var li = document.createElement("li");
+              var inputValue = document.getElementById("myInput").value;
+              var t = document.createTextNode(inputValue);
+              li.appendChild(t);
+              if (inputValue === '') {
+                alert("You must write something!");
+              } else {
+                document.getElementById("myUL").appendChild(li);
+              }
+              document.getElementById("myInput").value = "";
+            
+              var span = document.createElement("SPAN");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "close";
+              span.appendChild(txt);
+              li.appendChild(span);
+            
+              for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                  var div = this.parentElement;
+                  div.style.display = "none";
+                }
+              }
+            }
+            </script>
+        </div>   
+            </body>
+    </html>
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
-	<script src="//localhost:35729/livereload.js"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+    
 </body>
 </html>
