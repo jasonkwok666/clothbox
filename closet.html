@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="vendor/select2/select2.min.css">
     <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
-     <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/aos.css" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
@@ -26,39 +26,18 @@
     <script src="js/modernizr.js"></script>
         
 </head>
-<body data-spy="scroll" data-target="#navbar" class="static-layout">
-<div id="side-nav" class="sidenav">
-	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
-	<div class="sidenav-content">
-	</div>
-</div>	<div id="side-search" class="sidenav">
-	<a href="javascript:void(0)" id="side-search-close">&times;</a>
-	<div class="sidenav-content">
-		<form action="">
-
-			<div class="input-group md-form form-sm form-2 pl-0">
-			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-			  <div class="input-group-append">
-			    <button class="input-group-text red lighten-3" id="basic-text1">
-			    	<span class="lnr lnr-magnifier"></span>
-			    </button>
-			  </div>
-			</div>
-
-		</form>
-	</div>
-	
-</div>	<nav id="header-navbar" class="navbar navbar-expand-lg py-4">
-    <div class="container">
+<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
+  <dic class="boxed-page">
+    <nav id="header-navbar" class="navbar navbar-expand-lg py-4">
+  <div class="container">
         <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
-            <h3 class="font-weight-bolder mb-0">ClothBox</h3>
+          <h3 class="font-weight-bolder mb-0">ClothBox</h3>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
             <span class="lnr lnr-menu"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar-nav-header">
-            <ul class="navbar-nav ml-auto">
+            <div class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="closet.html">DigitalCloset</a>
                 </li>
@@ -81,38 +60,16 @@
                         <span class="lnr lnr-menu"></span>
                     </a>
                 </li>
-            </ul>
+              </div>
         </div>
     </div>
 </nav>
 
-<div id="side-nav" class="sidenav">
-    <a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
-	<div class="sidenav-content">
-	</div>
-</div><div id="side-search" class="sidenav">
-	<a href="javascript:void(0)" id="side-search-close">&times;</a>
-	<div class="sidenav-content">
-		<form action="">
-
-			<div class="input-group md-form form-sm form-2 pl-0">
-			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-			  <div class="input-group-append">
-			    <button class="input-group-text red lighten-3" id="basic-text1">
-			    	<span class="lnr lnr-magnifier"></span>
-			    </button>
-			  </div>
-			</div>
-
-		</form>
-	</div>
-	
-</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
+<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
   <div class="container text-center">
     <!-- <h1 class="display-2 mb-4">Digital Closet</h1> -->
   </div>
-    
+ 
   <!DOCTYPE html>
     <html>
     <head>
@@ -120,37 +77,21 @@
         <title> Digital Closet</title>
         <script src="js/digitalcloset.js"></script>
         <style>
-        body {
-            margin: 0;
-            min-width: 250px;
-        }
-            
-        /* Include the padding and border in an element's total width and height */
-        * {
-            box-sizing: border-box;
-        }
-            
-        /* Style the list items */
+          
+    
         .first-ul{
             cursor: pointer;
-            position: relative;
+            position: fixed;
             list-style-type: none;
             transition: 0.2s;
-            margin-left: -400px;
-            
-              
-        /* make the list items unselectable */
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            margin-left: -400px; 
         }
             
         .close {
-        position: absolute;
-        right: 350px;
-        top: 0;
-        padding: 12px 16px 12px 16px;
+        position: fixed;
+        right: 200;
+        top: 10;
+        padding: 12px 16px ;
         }
             
         .header {
@@ -160,55 +101,142 @@
         margin-left: -400px;
         margin-top: -250px;
         }   
-
-        /* Clear floats after the header */
-        .header:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-            
+        
         /* Style the input */
         input {
-            margin: 0;
-            border: none;
-            border-radius: 0;
-            width: 45%;
-            padding: 10px;
-            float: left;
-            font-size: 16px;
+          margin: 0;
+          border: none;
+          border-radius: 0;
+          width: 45%;
+          padding: 10px;
+          float: left;
+          font-size: 16px;
+        }
+
+        ul li {
+          cursor: pointer;
+          position: relative;
+          padding: 12px 8px 12px 40px;
+          list-style-type: none;
+          background: rgb(155, 143, 143);
+          font-size: 18px;
+          transition: 0.2s;
+  
+        /* make the list items unselectable */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         }
             
         /* Style the "Add" button */
         .addBtn {
-            padding: 10px;
-            width: 25%;
-            background: #d9d9d9;
-            color: #555;
-            float: left;
-            text-align: center;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-            border-radius: 0;
+          padding: 16px 20px;
+          top: 144px;
+          right: 28px;
+          width: 280px;
+          position: fixed;
+          background-color: white;
+          color: #555;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+          transition: 0.3s;
+          border: none;
+        }
+
+        .title{
+          top:150px;
+          left:200px;
+          position: fixed;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+          display: none;
+          position: fixed;
+          top: 60;
+          right: 15px;
+          border: 3px solid #f1f1f1;
+          /* z-index: 9; */
+        }
+        /* Add styles to the form container */
+        .form-container {
+          max-width: 300px;
+          padding: 5px;
+          background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=password] {
+          width: 100%;
+          padding: 10px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+          background-color: #ddd;
+          outline: black;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+          background-color: rgb(190, 84, 209);
+          color: white;
+          padding: 10px 10px;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          margin-bottom:10px;
+          opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+          background-color: rgb(98, 0, 255);
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+          opacity: 1;
         }
             
         </style>
     </head>
     <body>
         <div class= "container">
-            <div id="myDIV" class="header">
-              <h2 style="margin:2px">My Closet</h2>
-              <input type="text" id="myInput" placeholder="item...">
-              <span onclick="newElement()" class="addBtn">Add to Closet</span>
-            </div>
+            <div id="myDIV" class="header"></div>
+              <h2 class="title">My Closet</h2>
+              <!-- <button class="addBtn" onclick="openForm()">Add to Closet</button> -->
+              <!-- <span onclick="newElement()" class="addBtn">Add to Closet</span> -->
+              <button onclick="openForm()" class="addBtn">Add to Closet</button>
+          
             
             <ul class="first-ul" id="myUL">
             </ul>
+
+            <div class="form-popup" id="myForm">
+              <form action="/action_page.php" class="form-container">
+                <label for="name"><b>Name</b></label>
+                <input type="text" name="name" id="myInput" placeholder="Enter name" required>
             
-            <script>
+                <label for="type"><b>Type</b></label>
+                <input type="type" name="type" id="myInput" placeholder="Enter Type" required>
+
+                <label for="season"><b>Season</b></label>
+                <input type="season" name="season" id="myInput" placeholder="Enter Season" required>
+                
             
+                <button type="submit" onclick="newElement()" class="btn">Add</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+              </form>
+            </div>
             
+              
+          <script>
             // Click on a close button to hide the current list item
             var close = document.getElementsByClassName("close");
             var i;
@@ -218,7 +246,14 @@
                 div.style.display = "none";
               }
             }
-            
+
+            function openForm() {
+              document.getElementById("myForm").style.display = "block";
+            }
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+
             // Create a new list item when clicking on the "Add" button
             function newElement() {
               var li = document.createElement("li");
@@ -245,13 +280,15 @@
                 }
               }
             }
-            </script>
+
+
+           </script>
         </div>   
             </body>
     </html>
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
-    <script src="//localhost:35729/livereload.js"></script>
+  <script src="//localhost:35729/livereload.js"></script>
     
 </body>
 </html>
