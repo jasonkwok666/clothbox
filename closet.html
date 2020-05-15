@@ -65,14 +65,14 @@
             text-decoration: none;
             font-size: 18px;
             color: black;
-            display: block       
+            display: block;       
         }
         /* Style the header */  
         .header {
         padding: 30px 60px;
         color: white;
         text-align: left;
-        margin-left: -500px;
+        margin-left: -600px;
         margin-top: -250px;
         }   
             
@@ -81,7 +81,7 @@
             margin: 5;
             border: none;
             border-radius: 0;
-            width: 30%;
+            width: 22%;
             padding: 10px;
             float: left;
             font-size: 16px; 
@@ -149,7 +149,7 @@
             cursor: pointer;
         } 
         </style>
-
+        
     </head>
     <body>
         <div class= "container">
@@ -158,17 +158,20 @@
                 <input type="text" id="name" placeholder="Name..." name="name">
                 <input type="text" id="type" placeholder="Type..." name="type" >
                 <input type="text" id="season" placeholder="Season..."name="season">
+                <input type="text" id="color" placeholder="Color..."name="color">
             <br>
                 <button onclick="addClothes()" class="btn1">Add</button>
                 <button onclick="editTable()" class="btn2">Edit</button>
-                <button onclick="deleteRow()" class="btn3">Remove</button>   
+                <button onclick="deleteRow()" class="btn3">Remove</button> 
+                 
             </div>
 
             <table id="table">
                 <tr>
                   <th id="name"> Name </th>
                   <th id="type">Type</th>
-                  <th id="season">Season</th> 
+                  <th id="season">Season</th>
+                  <th id="color">Color</th>
                 </tr>
             </table>
               
@@ -193,9 +196,11 @@
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
                 var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
                 cell1.innerHTML = document.getElementById("name").value;
                 cell2.innerHTML = document.getElementById("type").value;
                 cell3.innerHTML = document.getElementById("season").value;
+                cell4.innerHTML = document.getElementById("color").value;
                 selectedRow();
             }
 
@@ -211,6 +216,7 @@
                         document.getElementById("name").value=this.cells[0].innerHTML;
                         document.getElementById("type").value=this.cells[1].innerHTML;
                         document.getElementById("season").value=this.cells[2].innerHTML;
+                        document.getElementById("color").value=this.cells[3].innerHTML;
                     };
                 }
             }
@@ -221,17 +227,23 @@
                 var name = document.getElementById("name").value;
                 var type = document.getElementById("type").value;
                 var season = document.getElementById("season").value;
+                var color = document.getElementById("color").value;
 
                 table.rows[index].cells[0].innerHTML = name;
                 table.rows[index].cells[1].innerHTML = type;
                 table.rows[index].cells[2].innerHTML = season;
+                table.rows[index].cells[3].innerHTML = color;
             }
             //delete the selected row
             function deleteRow(){
-                table.deleteRow(index);
-                document.getElementById("name").value = "";
-                document.getElementById("type").value = "";
-                document.getElementById("season").value = "";
+                var result = confirm("Are you sure you want to delete this item?");
+                if (result) {
+                    table.deleteRow(index);
+                    document.getElementById("name").value = "";
+                    document.getElementById("type").value = "";
+                    document.getElementById("season").value = "";
+                    document.getElementById("color").value = "";
+                }
             }
             </script>
         </div>   
